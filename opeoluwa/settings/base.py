@@ -227,6 +227,26 @@ logging.config.dictConfig(
                 "handlers": ["console"],
                 "propagate": False,
             },
+            "accounts": {
+                "level": "INFO",
+                "handlers": ["console"],
+                "propagate": False,
+            },
+            "common": {
+                "level": "INFO",
+                "handlers": ["console"],
+                "propagate": False,
+            },
+            "general": {
+                "level": "INFO",
+                "handlers": ["console"],
+                "propagate": False,
+            },
+            "portfolio": {
+                "level": "INFO",
+                "handlers": ["console"],
+                "propagate": False,
+            },
             "django.server": DEFAULT_LOGGING["loggers"]["django.server"],
         },
     }
