@@ -20,7 +20,8 @@ SECRET_KEY = config("SECRET_KEY")
 
 
 # ALLOWED_HOSTS = config("ALLOWED_HOSTS").split(" ")
-ALLOWED_HOSTS = [".vercel.app", ".now.sh", "localhost", "127.0.0.1"]
+# ALLOWED_HOSTS = [".vercel.app", ".now.sh", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
