@@ -1,1 +1,0 @@
-web: uvicorn opeoluwa.asgi:application --reload
