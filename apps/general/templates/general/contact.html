@@ -1,0 +1,115 @@
+{% extends "common/index.html" %}
+{% load static %}
+{% block content %}
+    <style>
+      .about-contact {
+        font-size: 0.9em;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .field-err {
+        font-size: 0.7em;
+        color: red;
+      }
+    </style>
+    <!-- Page Content -->
+    <div class="page-heading contact-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>contact us</h4>
+              <h2>let’s get in touch</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="find-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Our Location on Maps</h2>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div id="map">
+              <iframe src="{{sitedetail.maps_url}}" width="100%" height="330px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="left-content">
+              <h4>About our office</h4>
+              <ul>
+                <li class="about-contact">Email: {{sitedetail.email}}</li>
+                <li class="about-contact">Phone: {{sitedetail.phone}}</li>
+                <li class="about-contact">Address: {{sitedetail.address}}</li>
+                <li class="about-contact">Work Hours: {{sitedetail.work_hours}}</li>
+              </ul>
+              <ul class="social-icons">
+                <li><a target="_blank" href="{{sitedetail.fb}}"><i class="fa fa-facebook"></i></a></li>
+                <li><a target="_blank" href="{{sitedetail.tw}}"><i class="fa fa-twitter"></i></a></li>
+                <li><a target="_blank" href="{{sitedetail.ln}}"><i class="fa fa-linkedin"></i></a></li>
+                <li><a target="_blank" href="{{sitedetail.ig}}"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="send-message">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Send us a Message</h2>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="contact-form">
+              <form id="contact" method="post">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      {{form.name}}
+                      <p class="field-err">{{form.name.errors}}</p>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      {{form.email}}
+                      <p class="field-err">{{form.email.errors}}</p>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      {{form.subject}}
+                      <p class="field-err">{{form.subject.errors}}</p>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      {{form.text}}
+                      <p class="field-err">{{form.text.errors}}</p>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

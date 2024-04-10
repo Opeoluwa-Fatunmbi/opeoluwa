@@ -1,8 +1,8 @@
 from pathlib import Path
 import os
 from decouple import config
-# Opeoluwa Fatunmbi #
 
+# Opeoluwa Fatunmbi #
 
 
 # import logging
@@ -25,7 +25,7 @@ SECRET_KEY = config("SECRET_KEY")
 
 
 # ALLOWED_HOSTS = config("ALLOWED_HOSTS").split(" ")
-ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [".vercel.app", "localhost", "127.0.0.1"]
 
 # Application definition
 
@@ -61,6 +61,7 @@ LOCAL_APPS = [
     "apps.common",
     "apps.accounts",
     "apps.portfolio",
+    "apps.general",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
