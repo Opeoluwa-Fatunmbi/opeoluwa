@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Opeoluwa Fatunmbi</title>
+        <link rel="stylesheet" href="{% static 'media/css/tailwind.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+
+    <body class="bg-gray-100">
+        
+        <section class="py-10 md:py-16">
+
+            <div class="container max-w-screen-xl mx-auto px-4">
+
+                <nav class="flex items-center justify-between mb-40">
+                    <!-- <img src="media/image/navbar-logo.png" alt="Logo"> -->
+                    <h1><strong>O. F.</strong></h1> 
+
+                    <button class="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500">Get my CV</button>
+                </nav>
+
+                <div class="text-center">
+                    <!--
+                    <div class="flex justify-center mb-16">
+                        <img src="media/image/home-img.png" alt="Image">
+                    </div>
+                    -->
+                    <h3 class="font-medium text-gray-600 text-2xl md:text-4xl uppercase mb-8">Opeoluwa Fatunmbi</h3>
+
+
+
+                    <h1 class="font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8">Software Engineer / Backend Engineer</h1>
+
+                    <p class="font-normal text-gray-600 text-md md:text-xl mb-16">I have a passion for software. I enjoy creating tools that make life easier for people.</p>
+
+                    <a href="#" class="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500">Hire me</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        {% block content %} {% endblock%}
+
+        <footer class="py-10 md:py-16 mb-20 md:mb-40 lg::mb-52">
+
+            <div class="container max-w-screen-xl mx-auto px-4">
+
+                <div class="text-center">
+                    <h1 class="font-medium text-gray-700 text-4xl md:text-5xl mb-5">Reach out</h1>
+
+                    <p class="font-normal text-gray-400 text-md md:text-lg mb-20">I’m presently currently looking to on a new client work. Please feel free to contact me for any <br>inquiries.</p>
+
+                    <div class="flex items-center justify-center space-x-8">
+                        <a href="https://twitter.com/opeoluwaaaa" class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <i data-feather="twitter" class="text-gray-500 hover:text-gray-800 transition ease-in-out duration-500"></i>
+                        </a>
+
+                        <a href="#" class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <i data-feather="facebook" class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
+                        </a>
+    
+                        <a href="#" class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <i data-feather="instagram" class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
+                        </a>
+
+                        <a href="https://github.com/Opeoluwa-Fatunmbi" class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <i data-feather="github" class="text-gray-500 hover:text-gray-800 transition ease-in-out duration-500"></i>
+                        </a>
+                    
+                        <a href="https://medium.com/@opeoluwafatunmbi" target="_blank" rel="noopener noreferrer" class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current text-gray-500 hover:text-gray-700 transition ease-in-out duration-500">
+                                <path d="M5 5v14h14V5H5zm12 12H7V7h10v10z"/>
+                            </svg>
+                        </a>
+                    
+                        <a href="https://www.linkedin.com/in/ofatunmbi/" class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
+                            <i data-feather="linkedin" class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </footer>
+
+
+        <script>
+            feather.replace()
+        </script>
+
+    </body>
+</html>

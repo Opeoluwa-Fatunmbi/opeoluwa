@@ -10,4 +10,4 @@ class HomeView(View):
         context = {
             "portfolio": portfolio,
         }
-        return render(request, "portfolio/index.html", context)
+        return render(request, "portfolio/home.html", context)
