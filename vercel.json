@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "opeoluwa/wsgi.py",
+            "src": "opeoluwa/asgi.py",
             "use": "@vercel/python",
             "config": {
                 "runtime": "python3.9",
@@ -13,7 +13,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "opeoluwa/wsgi.py"
+            "dest": "opeoluwa/asgi.py"
         }
     ]
 }
