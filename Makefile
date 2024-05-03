@@ -24,7 +24,7 @@ serv:
 
 userv:
 	uvicorn opeoluwa.asgi:application --reload
-
+	
 mmig: # run with "make mmig" or "make mmig app='app'"
 	if [ -z "$(app)" ]; then \
 		python manage.py makemigrations; \
