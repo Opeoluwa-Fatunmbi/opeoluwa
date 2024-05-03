@@ -276,7 +276,6 @@ JAZZMIN_SETTINGS = {
 }
 
 
-
 # Channels settings
 
 ASGI_APPLICATION = "opeoluwa.asgi.application"
@@ -291,4 +290,3 @@ REFRESH_TOKEN_LIFETIME_MINUTES = config("REFRESH_TOKEN_LIFETIME_MINUTES")
 # GOOGLE API-KEY
 
 GOOGLE_API_KEY = config("GOOGLE_API_KEY")
-
