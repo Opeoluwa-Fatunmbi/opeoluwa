@@ -5,12 +5,6 @@ from decouple import config
 # Opeoluwa Fatunmbi #
 
 
-# import logging
-import logging.config
-
-# from django.utils.log import DEFAULT_LOGGING
-import dj_database_url
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -52,7 +46,6 @@ THIRD_PARTY_APPS = [
     "phonenumber_field",
     "django_countries",
     "whitenoise",
-    "treblle",
 ]
 
 # Local apps
@@ -77,7 +70,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "treblle.middleware.TreblleMiddleware",
 ]
 
 ROOT_URLCONF = "opeoluwa.urls"
@@ -284,32 +276,10 @@ JAZZMIN_SETTINGS = {
 }
 
 
-# Cache settings
-
-# CACHES = {
-#     "default": {
-#         "BACKEND": "django.core.cache.backends.redis.RedisCache",
-#         "LOCATION": "redis://localhost:6379",
-#     }
-# }
-
-
-# SESSION_ENGINE = "django.contrib.sessions.backends.cache"
-
 
 # Channels settings
 
 ASGI_APPLICATION = "opeoluwa.asgi.application"
-
-# CHANNEL_LAYERS = {
-#     "default": {
-#         "BACKEND": "channels_redis.core.RedisChannelLayer",
-#         "CONFIG": {
-#             # Use Redis as the channel layer backend
-#             "hosts": [("127.0.0.1", 6379)],
-#         },
-#     },
-# }
 
 
 # JWT Settings
@@ -322,10 +292,3 @@ REFRESH_TOKEN_LIFETIME_MINUTES = config("REFRESH_TOKEN_LIFETIME_MINUTES")
 
 GOOGLE_API_KEY = config("GOOGLE_API_KEY")
 
-
-# TREBLLE SETTINGS
-
-TREBLLE_INFO = {
-    "api_key": config("TREBLLE_API_KEY"),
-    "project_id": config("TREBLLE_PROJECT_ID"),
-}
