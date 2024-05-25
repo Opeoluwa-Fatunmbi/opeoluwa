@@ -1,8 +1,7 @@
 from django.shortcuts import redirect, render
 from django.views import View
-from apps.general.forms import MessageForm
 
-from apps.general.models import SiteDetail
+
 import sweetify
 
 # Create your views here.
@@ -10,29 +9,12 @@ import sweetify
 
 class AboutView(View):
     def get(self, request):
-        sitedetail, created = SiteDetail.objects.get_or_create()
-        context = {"sitedetail": sitedetail}
-        return render(request, "general/about.html", context)
+        return render(request, "general/about.html")
 
 
 class ContactView(View):
     def get(self, request):
-        sitedetail, created = SiteDetail.objects.get_or_create()
-        form = MessageForm()
-        context = {"sitedetail": sitedetail, "form": form}
-        return render(request, "general/contact.html", context)
+        return render(request, "general/contact.html")
 
     def post(self, request):
-        sitedetail, created = SiteDetail.objects.get_or_create()
-        form = MessageForm(request.POST)
-        if form.is_valid():
-            form.save()
-            sweetify.success(
-                request,
-                title="Sent",
-                text="Your message was sent successfully",
-                timer=3000,
-            )
-            return redirect("contact")
-        context = {"sitedetail": sitedetail, "form": form}
-        return render(request, "general/contact.html", context)
+        return render(request, "general/contact.html")

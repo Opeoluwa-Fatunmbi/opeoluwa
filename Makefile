@@ -22,6 +22,9 @@ show-logs:
 serv:
 	python manage.py runserver
 
+purge:
+	pip cache purge
+
 userv:
 	uvicorn opeoluwa.asgi:application --reload
 	

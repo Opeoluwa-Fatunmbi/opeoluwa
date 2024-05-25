@@ -43,8 +43,6 @@ THIRD_PARTY_APPS = [
     "corsheaders",
     "cloudinary",
     "cloudinary_storage",
-    "phonenumber_field",
-    "django_countries",
     "whitenoise",
 ]
 

@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from django.views import View
 
-# from apps.portfolio.models import Project
-
 
 # Create your views here.
 

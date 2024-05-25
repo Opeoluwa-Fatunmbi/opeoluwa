@@ -5,7 +5,7 @@ import uuid
 from .managers import UserManager
 from django.conf import settings
 from django.utils import timezone
-from apps.common.models import BaseModel
+
 
 # Create your models here.
 
@@ -37,27 +37,3 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.full_name
-
-
-class Jwt(BaseModel):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    access = models.TextField()
-    refresh = models.TextField()
-    blacklisted = models.BooleanField(default=False)
-
-
-class Otp(BaseModel):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    code = models.IntegerField()
-
-    objects = UserManager()
-
-    def check_expiration(self):
-        now = timezone.now()
-        diff = now - self.updated_at
-        if diff.total_seconds() > int(settings.EMAIL_OTP_EXPIRE_SECONDS):
-            return True
-        return False
-
-    def __str__(self):
-        return f"{self.user.full_name} - {self.code}"
